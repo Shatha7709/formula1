@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Bird - Formula 1 | Sponsorship Opportunity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Rockwell Nova Extra Bold', sans-serif;
+            color: #fff;
+            background-color: #000;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        /* Header with logo */
+        header {
+            background: linear-gradient(90deg, #FF0000, #FF4500, #FFD700);
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        header img {
+            display: block;
+            margin: 0 auto;
+            max-width: 150px;
+        }
+        header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        header p {
+            font-size: 1.3rem;
+            margin-top: 1rem;
+        }
+        /* Navigation */
+        nav {
+            background-color: #FF4500;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            font-weight: bold;
+            font-style: italic;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #FFD700;
+        }
+        section {
+            padding: 4rem 10%;
+            text-align: center;
+        }
+        /* First paragraph (Yellow Background, Black Text) */
+        .about p {
+            background-color: #FFD700;
+            color: #000;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        /* Second paragraph (Black Background, White Text) */
+        .sponsorship p {
+            background-color: #000;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        /* Gallery */
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        /* Social Media */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 2rem;
+        }
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: #FFFF00;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #111;
+            color: #ccc;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://raw.githubusercontent.com/Shatha7709/firebirds/main/Fire%20Bird.jpg" alt="Fire Bird Logo">
+        <h1>Fire Bird</h1>
+        <p>Adding fire to your race!</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Project</a>
+        <a href="#products">Products</a>
+        <a href="#sponsorship">Sponsorship</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>About the Project</h2>
+        <p>
+            We are a group of 5 dedicated girls from the Howard Of Effingham school. We are thrilled to share that we are entering an exciting 
+            competition as part of a STEAM project, where we will be competing with thousands of students from around the world. Our goal is to 
+            inspire young girls like us not to shy away from science and technology but to embrace it. The challenge is to design and create a Formula 1 
+            car that can reach speeds of 50 mph in just 1.5 seconds. In addition to the car, we will be creating our own kits and building a race track to 
+            qualify for this competition, as well as reaching out to potential sponsors who will be advertised on our car and kit.
+            We hope you will join us on this journey because together we can "Add fire to your race."
+        </p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <p>A 3D-printed car that can reach speeds of 50 mph in just 1.5 seconds.</p>
+        <div class="gallery">
+            <img src="https://raw.githubusercontent.com/Shatha7709/firebirds/main/formula1.jpg" alt="Formula 1 Car" width="500">
+        </div>
+    </section>
+
+    <section id="sponsorship" class="sponsorship">
+        <h2>Sponsorship Opportunities</h2>
+        <p>
+            We need your support in order to bring our project to life. We are seeking funding to help cover the costs of materials and equipment.
+            Imagine your company's logo on our car and kit, representing a team that stands for inclusivity, progress, and innovation. 
+            By supporting us, you wouldn't just be helping a group of girls build a car – you'd be backing a future generation of female engineers and
+            technologists. Your company would be seen as a champion of gender equality and progress. If you are interested, please contact us via 
+            our email at the bottom of the page. 
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Connect with Us</h2>
+        <p>Follow us on social media for the latest updates and opportunities:</p>
+        <div class="social-links">
+            <a href="https://firebird_f1inschools" target="_blank">Instagram</a>
+            <a href="mailto:julia.soud@icloud.com">Email Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Formula 1 in Schools Competition. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
