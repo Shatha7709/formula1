@@ -84,44 +84,51 @@
             display: none;
             flex-direction: column;
             background: #FF4500;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
             padding: 1rem;
+            text-align: center;
         }
 
         .mobile-menu a {
             padding: 10px;
-            text-align: center;
         }
 
-        /* Sections */
-        section {
+        /* Hero Section with Video */
+        .hero {
+            text-align: center;
             padding: 4rem 10%;
-            text-align: center;
+            background-color: #111;
         }
 
-        .about p, .sponsorship p {
+        .hero video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #FF0000;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
             background-color: #FFD700;
             color: #000;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(255, 255, 0, 0.2);
-            transition: transform 0.3s;
-        }
-
-        .about p:hover, .sponsorship p:hover {
-            transform: scale(1.05);
         }
 
         /* Gallery */
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
-            justify-items: center;
-            margin-top: 20px;
+            padding: 4rem 10%;
         }
 
         .gallery img {
@@ -135,26 +142,6 @@
             transform: scale(1.05);
         }
 
-        /* Buttons */
-        .cta-button {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 12px 24px;
-            font-size: 1rem;
-            color: #fff;
-            background: #FF4500;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-            text-decoration: none;
-        }
-
-        .cta-button:hover {
-            background: #FFD700;
-            color: #000;
-        }
-
         /* Footer */
         footer {
             text-align: center;
@@ -165,20 +152,18 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .menu-btn {
-                display: block;
-            }
-
-            nav a {
+            nav {
+                flex-direction: column;
                 display: none;
             }
 
-            .mobile-menu a {
+            .menu-btn {
                 display: block;
+                text-align: center;
             }
 
-            .gallery {
-                grid-template-columns: 1fr;
+            .mobile-menu {
+                display: flex;
             }
         }
     </style>
@@ -191,61 +176,58 @@
         <p>Adding fire to your race!</p>
     </header>
 
-    <!-- Navigation -->
     <nav>
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
-        <a href="#about">About</a>
+        <a href="#about">About Project</a>
         <a href="#products">Products</a>
         <a href="#sponsorship">Sponsorship</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#sponsorship">Sponsorship</a>
-        <a href="#contact">Contact</a>
-    </div>
+    <!-- Hero Section with Video -->
+    <section class="hero">
+        <h2>Watch Our Journey</h2>
+        <video controls>
+            <source src="https://www.example.com/sample-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <a class="cta-btn" href="https://www.f1inschools.co.uk/" target="_blank">Visit F1 in Schools</a>
+    </section>
 
-    <!-- Sections -->
     <section id="about" class="about">
         <h2>About the Project</h2>
-        <p>We are a group of 5 girls from Howard Of Effingham school, entering a STEAM competition to design an F1 car that reaches 50 mph in 1.5 seconds!</p>
-        <p>The competition is part of a STEAM project, where we will be competing with thousands of students from around the world. Our goal is to 
-            inspire young girls like us not to shy away from science and technology</p>
+        <p>
+            We are a group of 5 dedicated girls from the Howard Of Effingham school. We are thrilled to share that we are entering an exciting 
+            competition as part of a STEAM project, where we will be competing with thousands of students from around the world.
+        </p>
     </section>
 
     <section id="products">
         <h2>Our Products</h2>
-        <p>A 3D-printed Formula 1 car designed for speed and innovation.</p>
+        <p>A 3D-printed car that can reach speeds of 50 mph in just 1.5 seconds.</p>
         <div class="gallery">
-            <img src="https://raw.githubusercontent.com/Shatha7709/formula1/refs/heads/main/yas-schools-detail-page-f1-in-schoolsgallery985x554px-web06.avif" alt="Yas School Details">
+           <img src="https://raw.githubusercontent.com/Shatha7709/formula1/refs/heads/main/yas-schools-detail-page-f1-in-schoolsgallery985x554px-web06.avif" alt="Yas School Details">
         </div>
     </section>
 
-    <section id="sponsorship" class="sponsorship">
+    <section id="sponsorship">
         <h2>Sponsorship Opportunities</h2>
-        <p>Support our project and feature your brand on our car! Contact us for details.</p>
-        <p>By supporting us, you wouldn't just be helping a group of girls build a car – you'd be backing a future generation of female engineers and
-            technologists</p>
-        <a href="mailto:julia.soud@icloud.com" class="cta-button">Contact Us</a>
+        <p>
+            We need your support to bring our project to life! Imagine your company's logo on our car, representing a team that stands for innovation.
+        </p>
     </section>
 
     <section id="contact">
         <h2>Connect with Us</h2>
-        <a href="https://www.instagram.com/firebird_f1inschools/" target="_blank" class="cta-button">Follow us on Instagram</a>
+        <p>Follow us on social media:</p>
+        <a href="https://www.instagram.com/firebird_f1inschools/" target="_blank">Follow us on Instagram</a>
+        <br>
+        <a href="mailto:julia.soud@icloud.com">Email Us</a>
     </section>
 
     <footer>
-        <p>&copy; 2025 Fire Bird F1 Team. All rights reserved.</p>
+        <p>&copy; 2025 Formula 1 in Schools Competition. All rights reserved.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-        }
-    </script>
 
 </body>
 </html>
